@@ -5,14 +5,211 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ .Site.Title }}</title>
     <link rel="stylesheet" href="/css/tailwind.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        color-scheme: dark;
+      }
+
+      html,
+      body {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        overflow-x: clip;
+      }
+
+      body {
+        background:
+          radial-gradient(circle at top, rgba(245, 120, 35, 0.18), transparent 28%),
+          radial-gradient(circle at bottom, rgba(120, 20, 10, 0.18), transparent 34%),
+          #000;
+        overflow-y: auto;
+      }
+
+      .logo-shell {
+        position: relative;
+      }
+
+      .logo-mark {
+        position: relative;
+        opacity: 0.78;
+        filter: drop-shadow(0 0 8px rgba(255, 120, 24, 0.08));
+      }
+
+      .coming-soon {
+        font-family: "Cinzel", "Iowan Old Style", "Palatino Linotype", serif;
+        font-size: clamp(1.15rem, 4.4vw, 2.6rem);
+        font-weight: 700;
+        letter-spacing: 0.15em;
+        line-height: 1;
+        text-transform: uppercase;
+        color: rgba(255, 214, 170, 0.9);
+        text-shadow:
+          0 0 10px rgba(255, 140, 32, 0.08),
+          0 0 24px rgba(255, 91, 10, 0.05);
+      }
+
+      .spark {
+        position: absolute;
+        bottom: 18%;
+        width: 0.32rem;
+        height: 0.32rem;
+        border-radius: 9999px;
+        background: radial-gradient(circle, rgba(255, 220, 160, 0.95), rgba(255, 130, 28, 0.55) 58%, transparent 70%);
+        box-shadow: 0 0 10px rgba(255, 136, 20, 0.28);
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      .spark-1 {
+        left: 24%;
+        animation: spark-rise-1 4.6s linear infinite;
+      }
+
+      .spark-2 {
+        left: 70%;
+        width: 0.24rem;
+        height: 0.24rem;
+        animation: spark-rise-2 5.2s linear 1.4s infinite;
+      }
+
+      .spark-3 {
+        left: 39%;
+        width: 0.22rem;
+        height: 0.22rem;
+        animation: spark-rise-3 4.2s linear 0.6s infinite;
+      }
+
+      .spark-4 {
+        left: 56%;
+        width: 0.18rem;
+        height: 0.18rem;
+        animation: spark-rise-4 4.9s linear 2.1s infinite;
+      }
+
+      .spark-5 {
+        left: 16%;
+        width: 0.2rem;
+        height: 0.2rem;
+        animation: spark-rise-5 4.1s linear 1.2s infinite;
+      }
+
+      .spark-6 {
+        left: 31%;
+        width: 0.16rem;
+        height: 0.16rem;
+        animation: spark-rise-6 5.4s linear 2.6s infinite;
+      }
+
+      .spark-7 {
+        left: 64%;
+        width: 0.2rem;
+        height: 0.2rem;
+        animation: spark-rise-7 4.5s linear 0.9s infinite;
+      }
+
+      .spark-8 {
+        left: 82%;
+        width: 0.16rem;
+        height: 0.16rem;
+        animation: spark-rise-8 5s linear 1.8s infinite;
+      }
+
+      @keyframes spark-rise-1 {
+        0% { transform: translate3d(0, 0, 0) scale(0.4); opacity: 0; }
+        18% { opacity: 0.45; }
+        100% { transform: translate3d(-10px, -150px, 0) scale(0.9); opacity: 0; }
+      }
+
+      @keyframes spark-rise-2 {
+        0% { transform: translate3d(0, 0, 0) scale(0.35); opacity: 0; }
+        20% { opacity: 0.38; }
+        100% { transform: translate3d(8px, -130px, 0) scale(0.85); opacity: 0; }
+      }
+
+      @keyframes spark-rise-3 {
+        0% { transform: translate3d(0, 0, 0) scale(0.35); opacity: 0; }
+        16% { opacity: 0.32; }
+        100% { transform: translate3d(-6px, -115px, 0) scale(0.8); opacity: 0; }
+      }
+
+      @keyframes spark-rise-4 {
+        0% { transform: translate3d(0, 0, 0) scale(0.3); opacity: 0; }
+        14% { opacity: 0.28; }
+        100% { transform: translate3d(5px, -105px, 0) scale(0.75); opacity: 0; }
+      }
+
+      @keyframes spark-rise-5 {
+        0% { transform: translate3d(0, 0, 0) scale(0.34); opacity: 0; }
+        18% { opacity: 0.3; }
+        100% { transform: translate3d(-8px, -120px, 0) scale(0.78); opacity: 0; }
+      }
+
+      @keyframes spark-rise-6 {
+        0% { transform: translate3d(0, 0, 0) scale(0.26); opacity: 0; }
+        16% { opacity: 0.22; }
+        100% { transform: translate3d(4px, -96px, 0) scale(0.7); opacity: 0; }
+      }
+
+      @keyframes spark-rise-7 {
+        0% { transform: translate3d(0, 0, 0) scale(0.32); opacity: 0; }
+        20% { opacity: 0.34; }
+        100% { transform: translate3d(-5px, -126px, 0) scale(0.84); opacity: 0; }
+      }
+
+      @keyframes spark-rise-8 {
+        0% { transform: translate3d(0, 0, 0) scale(0.24); opacity: 0; }
+        15% { opacity: 0.2; }
+        100% { transform: translate3d(6px, -92px, 0) scale(0.68); opacity: 0; }
+      }
+
+      @media (max-width: 640px) {
+        body {
+          overflow-x: clip;
+        }
+
+        .coming-soon {
+          letter-spacing: 0.12em;
+          line-height: 1.08;
+        }
+
+        .spark {
+          bottom: 14%;
+        }
+      }
+    </style>
   </head>
-  <body class="bg-black">
-    <main class="flex min-h-screen items-center justify-center p-6">
-      <img
-        src="/logo.svg"
-        alt="Logo"
-        class="h-auto w-full max-w-[42rem]"
-      >
+  <body class="text-stone-100">
+    <main class="relative flex min-h-screen w-full overflow-hidden items-center justify-center px-4 py-8 sm:px-6 sm:py-10">
+      <div class="pointer-events-none absolute inset-0 overflow-hidden opacity-40">
+        <div class="absolute left-1/2 top-1/2 h-[22rem] w-[22rem] -translate-x-1/2 -translate-y-1/2 rounded-full border border-orange-500/10 sm:h-[34rem] sm:w-[34rem]"></div>
+        <div class="absolute left-1/2 top-1/2 h-[30rem] w-[30rem] -translate-x-1/2 -translate-y-1/2 rounded-full border border-orange-300/5 sm:h-[44rem] sm:w-[44rem]"></div>
+      </div>
+
+      <section class="relative z-10 flex w-full max-w-5xl flex-col items-center gap-5 overflow-hidden text-center sm:gap-8">
+        <div class="logo-shell w-full max-w-[20rem] sm:max-w-[42rem]">
+          <span class="spark spark-1"></span>
+          <span class="spark spark-2"></span>
+          <span class="spark spark-3"></span>
+          <span class="spark spark-4"></span>
+          <span class="spark spark-5"></span>
+          <span class="spark spark-6"></span>
+          <span class="spark spark-7"></span>
+          <span class="spark spark-8"></span>
+          <img
+            src="/logo.svg"
+            alt="Logo"
+            class="logo-mark h-auto w-full"
+          >
+        </div>
+
+        <div>
+          <p class="coming-soon">Coming soon</p>
+        </div>
+      </section>
     </main>
   </body>
 </html>
