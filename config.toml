@@ -1,4 +1,4 @@
 baseURL = "/"
 languageCode = "en-us"
-title = "gilgamosh_home"
+title = "Gilgamosh"
 disableKinds = ["taxonomy", "term", "RSS", "sitemap", "robotsTXT", "404"]
