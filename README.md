@@ -1,6 +1,6 @@
 # gilgamosh_home
 
-Simple landing page built with Hugo and Tailwind CSS.
+Gilgamosh website built with hugo and tailwindcss
 
 ## Requirements
 
@@ -20,7 +20,6 @@ hugo version
 From the project directory:
 
 ```bash
-cd /home/node/.openclaw/workspace/gilgamosh_home
 npm install
 ```
 
