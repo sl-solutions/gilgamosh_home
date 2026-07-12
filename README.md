@@ -93,7 +93,7 @@ You can also choose a custom destination:
 If you want the exact deployable flow used in this project:
 
 ```bash
-cd /home/node/.openclaw/workspace/gilgamosh_home
+# cd into project root
 npm install
 npm run build:nginx
 ```
