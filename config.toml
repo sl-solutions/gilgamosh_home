@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "https://gilgamosh.band/"
 languageCode = "en-us"
 title = "Gilgamosh"
 disableKinds = ["taxonomy", "term", "RSS", "sitemap", "robotsTXT", "404"]
