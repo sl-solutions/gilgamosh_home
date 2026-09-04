@@ -41,7 +41,7 @@
         filter: drop-shadow(0 0 8px rgba(255, 120, 24, 0.08));
       }
 
-      .coming-soon {
+      .home-copy > :first-child {
         font-family: "Cinzel", "Iowan Old Style", "Palatino Linotype", serif;
         font-size: clamp(1.15rem, 4.4vw, 2.6rem);
         font-weight: 700;
@@ -173,7 +173,7 @@
           overflow-x: clip;
         }
 
-        .coming-soon {
+        .home-copy > :first-child {
           letter-spacing: 0.12em;
           line-height: 1.08;
         }
@@ -208,8 +208,8 @@
           >
         </div>
 
-        <div>
-          <p class="coming-soon">Coming soon</p>
+        <div class="home-copy">
+          {{ .Content }}
         </div>
       </section>
     </main>

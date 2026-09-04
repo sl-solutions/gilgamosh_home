@@ -28,6 +28,7 @@ This installs the Tailwind CSS build dependency from `package.json`.
 ## Project structure
 
 - `layouts/index.html` - main landing page template
+- `content/_index.md` - homepage copy rendered by Hugo
 - `assets/css/input.css` - Tailwind source file
 - `static/` - static assets copied into the final site
 - `public/` - local Hugo build output
