@@ -7,6 +7,7 @@ This repository is the source for the `gilgamosh_home` site. Keep changes aligne
 - Framework: Hugo
 - CSS pipeline: Tailwind CSS, built with the `tailwindcss` CLI from `package.json`
 - Main template: `layouts/index.html`
+- Home page content: `content/_index.md`
 - Tailwind source: `assets/css/input.css`
 - Generated CSS: `static/css/tailwind.css`
 - Static assets: `static/`
@@ -53,7 +54,7 @@ Do not add extra build tools, bundlers, or frameworks unless they are clearly ne
 ## Workflow
 
 - Treat `public/` and generated CSS as build artifacts derived from source.
-- Make source changes in `layouts/`, `assets/`, `static/`, and config files, then rebuild.
+- Make source changes in `content/`, `layouts/`, `assets/`, `static/`, and config files, then rebuild.
 - For local validation, use `npm run build`.
 - For nginx deployment on this machine, use `npm run build:nginx`.
 
